@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="cardlist-form">
+        <p>カードリストを貼り付け</p>
+        <form  method="post">
+            <textarea id="cardlist" name="cardlist" rows="10" cols="33">
+{{ textarea_text }}
+            </textarea>
+            <input type="submit" value="カードリストを送信" />
+      </form>
+    </div>
+    <div class="cardlist-image">
+      <p>カードリスト</p>
+      {% for card_name in card_dict %}
+      <p>{{ card_name }}</p>
+      <img src="{{card_dict[card_name]}}"/>
+      {% endfor %}
+    </div>
+  </body>
+</html>
+
+
+
+  
